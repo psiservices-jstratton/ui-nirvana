@@ -1,10 +1,9 @@
-a.psi-nav-link {
-  color: initial;
+.psi-nav-bar {
+  border-bottom: 2px solid #ddd;
 }
 
-.psi-nav-button-container {
-  display: flex;
-  justify-content: space-between;
+a.psi-nav-link {
+  color: initial;
 }
 
 .psi-nav-buttons {

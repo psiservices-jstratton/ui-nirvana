@@ -1,8 +1,6 @@
 import React from 'react';
 import { useRouteMatch } from 'react-router-dom'
 import {
-    DropdownMenu,
-    DropdownItem,
     Navbar,
     NavbarBrand,
     Nav,
@@ -17,24 +15,21 @@ export default function NavigationBar() {
     const isTestRoute = useRouteMatch('/test');
 
     return (
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="md" className="psi-nav-bar">
             <NavbarBrand href="/">
                 <img src={logo} alt="Psi logo" />
             </NavbarBrand>
-            <Nav navbar>
-                {
-                    isTestRoute ? <NavButtons /> : (
+            {
+                isTestRoute ? (
+                    <NavButtons />
+                ) : (
+                    <Nav>
                         <NavItem>
                             <NavLink to="/test" label="Test" />
                         </NavItem>
-                    )
-                }
-                <NavItem>
-                    <DropdownMenu>
-                        <DropdownItem />
-                    </DropdownMenu>
-                </NavItem>
-            </Nav>
+                    </Nav>
+                )
+            }
         </Navbar>
     );
 }

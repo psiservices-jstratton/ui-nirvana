@@ -1,17 +1,21 @@
 import React, { Fragment } from 'react';
-import { Button } from 'reactstrap';
+import { Button, Nav, NavItem } from 'reactstrap';
 
 export default function NavButtons() {
     return (
         <Fragment>
-            <div>
+            <Nav className="mr-auto">
                 <Button color="secondary" className="psi-nav-buttons">Prev</Button>
                 <Button color="secondary" className="psi-nav-buttons">Next</Button>
-            </div>
-            <div style={{ alignSelf: 'flex-end' }}>
-                <Button color="secondary" className="psi-nav-buttons">Suspend</Button>
-                <Button color="secondary" className="psi-nav-buttons">End</Button>
-            </div>
+            </Nav>
+            <Nav>
+                <NavItem>
+                    <Button color="secondary" className="psi-nav-buttons">Suspend</Button>
+                </NavItem>
+                <NavItem>
+                    <Button color="secondary" className="psi-nav-buttons">End</Button>
+                </NavItem>
+            </Nav>
         </Fragment>
     )
 }
